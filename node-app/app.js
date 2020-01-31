@@ -40,11 +40,19 @@ function getFromClient(request,response){
     }
 }
 
+var data = {
+    'Taro':'00000',
+    'hanako':'11111',
+    'shiro':'22222',
+    'jiro':'33333'
+};
+
 function response_index(request,response){
-    var msg = "this is Index page"
+    var msg = "this is Index page";
     var content = ejs.render(index_page,{
         title:"Index",
         content:msg,
+        data:data,
     });
     response.writeHead(200, {'Content-Type': 'text/html'});
     response.write(content);
