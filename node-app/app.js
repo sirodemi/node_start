@@ -14,7 +14,7 @@ function getFromClient(request,response){
                 replace(/dummy_content/g, 'コンテンツ');
 
             response.writeHead(200, {'Content-Type': 'text/html'});
-            response.write(data);
+            response.write(content);
             response.end();
         }
     );
